@@ -1,0 +1,5 @@
+std_msgs/Header header
+
+uint8 selected_mission
+bool mission_confirmed
+uint8 vehicle_state

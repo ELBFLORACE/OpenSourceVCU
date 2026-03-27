@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<package format="3">
+  <name>vcu_shared_lib</name>
+  <version>1.0.0</version>
+  <description>Shared headers for multiple packages</description>
+  <maintainer email="marvin.jacob@elbflorace.de">Marvin JAcob</maintainer>
+  <license>MIT</license>
+
+  <depend>ix_msgs</depend>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <export />
+</package>

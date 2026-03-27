@@ -1,0 +1,4 @@
+cantools==39.4.5
+typing_extensions~=4.12.0
+argparse==1.4.0
+GitPython==3.1.43

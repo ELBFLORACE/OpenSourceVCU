@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>vcu_launch</name>
+  <version>1.0.0</version>
+  <description>The vcu_launch package</description>
+
+  <maintainer email="niklas.leukroth@elbflorace.de">Niklas Leukroth</maintainer>
+
+
+  <license>MIT</license>
+
+  <exec_depend>rclpy</exec_depend>
+
+  <!-- The export tag contains other, unspecified, tags -->
+  <export>
+    <!-- Other tools can request additional information be placed here -->
+	<build_type>ament_python</build_type>
+  </export>
+</package>

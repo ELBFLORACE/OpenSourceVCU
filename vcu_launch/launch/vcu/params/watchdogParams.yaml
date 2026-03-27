@@ -1,0 +1,27 @@
+vcu_watchdog:
+    ros__parameters:
+      timeouts:
+        periodic: 50                  # [ms]  | int     | 
+        pduTimeout: 500               # [ms]  | int     | timeout for pdu communication
+        ssbFrontTimeout: 500          # [ms]  | int     | timeout for ssb front communication
+        ssbRearTimeeout: 1000         # [ms]  | int     | timeout for ssb rear communication
+        bseTimeout: 500               # [ms]  | int     | timeout for bse communication
+        amsTimeout: 500               # [ms]  | int     | timeout for accumulator communication
+        energymeterTimeout: 100       # [ms]  | int     | timeout for energymeter communication
+        disTimeout: 300               # [ms]  | int     | timeout for dis communication        
+        inverterTimeout: 100          # [ms]  | int     | timeout for inverter communication
+        dvTimeout: 50                 # [ms]  | int     | timeout for dv software system communication
+        assmTimeout: 100              # [ms]  | int     | timeout for assm pcb communication
+        
+      errors:
+        appsImplausibilityTime: 100   # [ms]  | int     | timeout for apps implausibilitys
+        appsError: 200                # [ms]  | int     | timeout for apps sensors
+        brakePressureError: 500       # [ms]  | int     | timeout for brake pressure sensors
+        brakeForceError: 500          # [ms]  | int     | timeout for brakeforce sensor
+        ebsPressureError: 100         # [ms]  | int     | timeout for ebs pressure sensor
+      
+      brakeforceReleased: 240.0       # [N]   | double  | sensor brakeforce when pedal is fully released
+      brakeforcePressed: 710.0        # [N]   | double  | sensor brakeforce when pedal is fully pushed
+      brakeforceCaliOffset: 200.0     # [N]   | double  | offset in brakeforce to rekupedal calculation
+
+      recuState: true                 # [-]   | bool    | initial recu state on startup

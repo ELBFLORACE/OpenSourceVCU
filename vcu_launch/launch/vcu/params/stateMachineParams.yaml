@@ -1,0 +1,17 @@
+stateMachineNode:
+    ros__parameters:
+      maxPrechargeTime: 8.0                 # seconds
+      normalPrechargeTime: 1.5              # seconds
+
+      brakePressureForR2D: 8.0              # bar
+      maxReleasedEBSPressureFront: 0.5      # bar
+      maxReleasedEBSPressureRear: 0.5       # bar
+      minPressurizedEBSPressureFront: 8.0   # bar
+      minPressurizedEBSPressureRear: 8.0    # bar
+      maxEBSPressureFront: 50.0             # bar
+      maxEBSPressureRear: 50.0              # bar
+      minEBSPressureForAsOff: 5.0           # bar
+      maxReleasedBrakePressureFront: 0.5    # bar
+      maxReleasedBrakePressureRear: 0.5     # bar  
+      minPressurizedBrakePressureFront: 5.0 # bar
+      minPressurizedBrakePressureRear: 5.0  # bar

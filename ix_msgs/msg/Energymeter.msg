@@ -1,0 +1,7 @@
+std_msgs/Header header
+
+float32 ts_charge
+float32 ts_current
+float32 ts_voltage
+float32 lv_voltage
+float32 temperature_energymeter

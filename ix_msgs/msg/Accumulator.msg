@@ -1,0 +1,10 @@
+std_msgs/Header header
+
+uint8 bms_state
+uint8 bms_sdc_state
+float32 accumulator_voltage
+float32 bms_soc
+float32 cell_voltage_high
+float32 cell_voltage_low
+float32 cell_temperature_high
+float32 cell_temperature_low

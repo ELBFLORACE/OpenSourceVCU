@@ -1,0 +1,8 @@
+{
+        "": {"log-base": "/home/devuser/vcu_ws/log"},
+        "build": { "base-paths": ["/home/devuser/vcu_ws/src"],
+            "build-base": "/home/devuser/vcu_ws/build",
+            "install-base": "/home/devuser/vcu_ws/install",
+            "symlink-install": true,
+        }
+}

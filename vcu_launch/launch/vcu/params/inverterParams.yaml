@@ -1,0 +1,9 @@
+vcu:
+    ros__parameters:
+      inverterRPMLimit: 20000 # int
+      torqueLimit/upper: 20 # int
+      torqueLimit/lower: -20 # int
+      inverterEnable/fl: true
+      inverterEnable/fr: true
+      inverterEnable/rl: true
+      inverterEnable/rr: true

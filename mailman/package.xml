@@ -1,0 +1,31 @@
+<?xml version="1.0" ?>
+<package format="3">
+  <name>mailman</name>
+  <version>1.0.0</version>
+  <description>The mailman package</description>
+
+  <maintainer email="niklas.leukroth@elbflorace.de">Niklas Leukroth</maintainer>
+
+
+  <license>BSD</license>
+
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <depend>geometry_msgs</depend>
+  <depend>rclcpp</depend>
+  <depend>rospy</depend>
+  <depend>std_msgs</depend>
+  <depend>vcu_can_msgs_yourcar17</depend>
+  <depend>vcu_shared_lib</depend>
+  <depend>nav_msgs</depend>
+  <depend>ix_msgs</depend>
+  <depend>vcu_msgs</depend>
+
+  <exec_depend>rosidl_default_runtime</exec_depend>
+
+  <!-- The export tag contains other, unspecified, tags -->
+  <export>
+    <!-- Other tools can request additional information be placed here -->
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

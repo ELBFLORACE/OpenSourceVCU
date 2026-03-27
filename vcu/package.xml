@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>vcu</name>
+  <version>1.0.0</version>
+  <description>VCU main package</description>
+  <maintainer email="niklas.leukroth@elbflorace.de">Niklas Leukroth</maintainer>
+  <license>MIT</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <depend>ix_msgs</depend>
+  <depend>vcu_msgs</depend>
+  <depend>vcu_can_msgs_yourcar17</depend>
+  <depend>vcu_shared_lib</depend>
+
+
+  <test_depend>ament_cmake_ros</test_depend>
+  <test_depend>launch</test_depend>
+  <test_depend>launch_ros</test_depend>
+  <test_depend>launch_testing</test_depend>
+  <test_depend>launch_testing_ament_cmake</test_depend>
+  <test_depend>rclpy</test_depend>
+  <test_depend>turtlesim</test_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

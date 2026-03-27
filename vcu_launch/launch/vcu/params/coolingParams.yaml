@@ -1,0 +1,11 @@
+cooling:
+  ros__parameters:
+      #Cooling parameters
+      startTempAccuFans: 40.0 #[°C] double
+      endTempAccuFans: 55.0 #[°C] double
+      startTempSidewingLeft: 25.0 #[°C] double
+      endTempSidewingLeft: 60.0 #[°C] double
+      startTempSidewingRight: 25.0 #[°C] double
+      endTempSidewingRight: 60.0 #[°C] double
+      startTempCoolingPump: 20.0 #[°C] double
+      endTempCoolingPump: 55.0 #[°C] double

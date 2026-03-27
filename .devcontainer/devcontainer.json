@@ -1,0 +1,49 @@
+{
+  "name": "Devcontainer for VCU",
+  "privileged": true,
+  "build": {
+    // Sets the run context to one level up instead of the .devcontainer folder.
+    "context": "..",
+    "dockerfile": "../docker/Dockerfile",
+    "args": {
+      "USERNAME": "devuser"
+    }
+  },
+  "workspaceMount": "source=${localWorkspaceFolder}/..,target=/home/devuser/vcu_ws,type=bind",
+  "workspaceFolder": "/home/devuser/vcu_ws/src",
+  "containerEnv": {
+    "DISPLAY": "unix:0",
+  },
+  "runArgs": [
+    "--net=host",
+    "--ipc=host",
+    "--pid=host",
+    "-e",
+    "DISPLAY=${env:DISPLAY}",
+    "--device=/dev/snd",
+    "--device=/dev/dri/*"
+  ],
+  "mounts": [
+    "source=/tmp/.X11-unix,target=/tmp/.X11-unix,type=bind,consistency=cached",
+    "source=/dev/dri,target=/dev/dri,type=bind,consistency=cached",
+    "source=${localEnv:HOME}${localEnv:USERPROFILE},target=/home/devuser/hosthome/,type=bind,consistency=cached",
+    "source=${localWorkspaceFolder}/configs/.tmux.conf,target=/home/devuser/.tmux.conf,type=bind,consistency=cached",
+    "type=bind,source=/dev/bus/usb,target=/dev/bus/usb",
+    "source=/dev/bus/usb,target=/dev/bus/usb,type=bind",
+    "source=/dev/shm,target=/dev/shm,type=bind",
+    "source=/run/dbus/system_bus_socket,target=/run/dbus/system_bus_socket,type=bind",
+    "source=${localWorkspaceFolder}/docker/bash_aliases/,target=/home/devuser/.bash_aliases/,type=bind,consistency=cached"
+  ],
+  "postCreateCommand": "sudo chown -R devuser /home/devuser/vcu_ws/",
+  "containerUser": "devuser",
+  "remoteUser": "devuser",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-iot.vscode-ros",
+        "eamodio.gitlens",
+        "ms-vscode.cmake-tools"
+      ]
+    }
+  }
+}

@@ -1,0 +1,54 @@
+services:
+  vcu:
+    image: vcu:dev
+    stdin_open: true
+    tty: true
+    user: devuser
+    container_name: vcu_container
+    cap_add:
+      - NET_ADMIN
+    environment:
+      DISPLAY: "${DISPLAY}"
+      # ROS_DOMAIN_ID: "42"
+      QT_X11_NO_MITSHM: "1"
+      TERM: "xterm-256color"
+      PIPEWIRE_RUNTIME_DIR: "/tmp"
+    volumes:
+      - type: bind
+        source: "./.."
+        target: "/home/devuser/vcu_ws"
+      - type: bind
+        source: "./configs/.tmux.conf"
+        target: "/home/devuser/.tmux.conf"
+      - type: bind
+        source: "~/"
+        target: "/home/devuser/hosthome"
+      - type: bind
+        source: "./docker/bash_aliases"
+        target: "/home/devuser/.bash_aliases"
+      - type: bind
+        source: "~/.ros"
+        target: "/home/devuser/.ros"
+      - type: bind
+        source: "/dev/bus/usb"
+        target: "/dev/bus/usb"
+      - type: bind
+        source: "/dev/shm"
+        target: "/dev/shm"
+      - type: bind
+        source: "/run/user/1000/pipewire-0"
+        target: "/tmp/pipewire-0"
+      - type: bind
+        source: "/run/dbus/system_bus_socket"
+        target: "/run/dbus/system_bus_socket"
+      - "/etc/timezone:/etc/timezone:ro"
+      - "/etc/localtime:/etc/localtime:ro"
+    devices:
+      - /dev/bus/usb:/dev/bus/usb
+      - /dev/dri:/dev/dri
+      - /dev/nvme0:/dev/nvme0
+      - /dev/snd:/dev/snd
+    command: bash -c "sudo -S <<< 'efr' chmod 777 /dev/dri/renderD128 && ls home/devuser && source /home/devuser/.bashrc && ./home/devuser/vcu_ws/src/scripts/vcu_docker_launch.sh && tail -f /dev/null "
+    network_mode: host
+    ipc: host
+    pid: host

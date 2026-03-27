@@ -1,0 +1,17 @@
+<launch>
+   <executable
+        cwd="/home/devuser/hosthome/vcu_logs/small"
+        cmd="bash -c &quot;
+            ros2 bag record -o `date +%Y_%m_%d-%H_%M_%S`_vcu_small_efr17
+                /controls/ev/pedals_request /controls/pedals
+                /dv/mission/state
+                /state_machine/state
+                /vcu/accumulator/output /vcu/assm/output /vcu/dis/output /vcu/inverter/output /vcu/pdu/output /vcu/steering/output
+                /vcu/data/accelBrakeSteer /vcu/data/accumulator /vcu/data/assm /vcu/data/driverInput /vcu/data/energymeter /vcu/data/inverter /controls/inverter/request /vcu/data/pdu /vcu/data/res
+                /vcu/data/ssbRear /vcu/dv/allowance /vcu/vehicleState /vcu/vehicleState/debug /vcu/watchdog /vcu/watchdog/debug /vcu/cooling/request
+                /analytics/hardware /analytics/scaled_wspd
+                /efr/mission /vcu/temps
+        &quot;"
+        output="screen"
+    />
+</launch>

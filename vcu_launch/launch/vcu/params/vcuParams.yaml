@@ -1,0 +1,22 @@
+vcu:
+  ros__parameters:
+    calibration:
+      apps1:
+        pressed: 15.0
+        released: 40.5
+      apps2:
+        pressed: 45.0
+        released: 70.5
+
+    # Vehicle Missions:
+    #    --> INSPECTION     => 0
+    #    --> EBS_TEST       => 1
+    #    --> SKIDPAD        => 2
+    #    --> ACCELERATION   => 3
+    #    --> AUTOCROSS      => 4
+    #    --> TRACKDRIVE     => 5
+    #    --> SCRUTI         => 6
+    #    --> BRAKETEST      => 7
+    #    --> ENDURANCE      => 8
+    #    --> TEAMDRIVING    => 9
+    mission: 9

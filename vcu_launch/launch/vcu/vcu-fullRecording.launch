@@ -1,0 +1,11 @@
+<launch>
+   <executable
+        cwd="/home/devuser/hosthome/vcu_logs/full"
+        cmd="bash -c &quot;
+            ros2 bag record -o `date +%Y_%m_%d-%H_%M_%S`_vcu_full_efr17
+                -a --exclude-regex '^((\/camera_(left|right|front)\/image\/?.*)|(\/livox.*)|(\/out.*))'
+                --exclude-topics /vcu/vehicleState/readable
+            &quot;"
+        output="screen"
+    />
+</launch>

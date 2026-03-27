@@ -1,0 +1,7 @@
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+vcu_tests/tests/__pycache__/*
+*.pyc

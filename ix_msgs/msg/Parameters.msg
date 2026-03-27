@@ -1,0 +1,6 @@
+std_msgs/Header header
+
+float32 max_rpm
+float32 upper_torque_bound
+float32 lower_torque_bound
+float32 power_limit

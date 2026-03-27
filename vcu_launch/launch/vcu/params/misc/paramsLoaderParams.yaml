@@ -1,0 +1,6 @@
+efr_params_loader:
+  ros__parameters:
+    # Known mappings between node names and parameter paths
+    knownParameterFileMappings:
+      vcu_watchdog: "~/vcu_ws/src/vcu_launch/launch/vcu/params/watchdogParams.yaml"
+      vcu: "~/vcu_ws/src/vcu_launch/launch/vcu/params/vcuParams.yaml"

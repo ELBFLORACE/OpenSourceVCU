@@ -1,0 +1,9 @@
+std_msgs/Header header
+
+int32 lap_count
+int32 laps_togo
+float32 current_lap_length
+float32 length_togo
+float32 overall_length
+float32 current_mean_lap_length
+float32 total_progress
