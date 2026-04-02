@@ -240,3 +240,7 @@ createTestdayBagFolder
 
 Note: The devcontainer is designed for Linux systems and therefore only works to a limited extent under MacOS. In principle, however, it should be possible to build the repo.
 
+## Credits
+
+The example motor driver for the CubeMars AK70-10 has been implemented by the DFKI RIC Underactuated Lab, to whom we are very grateful. The original driver can be found here: 
+https://github.com/dfki-ric-underactuated-lab/mini-cheetah-tmotor-python-can
